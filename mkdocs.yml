@@ -12,6 +12,7 @@ edit_uri: edit/main/docs/ # 编辑按钮的url
 #[UI]
 theme:
   name: material
+  custom_dir: overrides
   font: false # 使用系统字体，避免依赖外部字体服务
   palette:
     - media: "(prefers-color-scheme: light)" # 检查用户系统配置是否为亮色
