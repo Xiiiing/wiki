@@ -116,7 +116,7 @@
    
    简述：在联邦学习框架下引入风格迁移与 ROI 保留策略，解决分布不平衡的病理切片域外泛化问题。
    
-   链接：[CVPR 2025]([CVPR 2025 Open Access Repository](https://openaccess.thecvf.com/content/CVPR2025/html/Raswa_HistoFS_Non-IID_Histopathologic_Whole_Slide_Image_Classification_via_Federated_Style_CVPR_2025_paper.html))
+   链接：[CVPR 2025 Open Access Repository](https://openaccess.thecvf.com/content/CVPR2025/html/Raswa_HistoFS_Non-IID_Histopathologic_Whole_Slide_Image_Classification_via_Federated_Style_CVPR_2025_paper.html)
    
 - [ ] 2025 年
   
@@ -124,7 +124,7 @@
    
    简述：提出 Memory-Mamba 模块，为多示例学习注入记忆增强机制，显著提升千兆像素切片分类性能。
    
-   链接：[CVPR 2025]([CVPR 2025 Open Access Repository](https://openaccess.thecvf.com/content/CVPR2025/html/Zheng_M3amba_Memory_Mamba_is_All_You_Need_for_Whole_Slide_CVPR_2025_paper.html))
+   链接：[CVPR 2025 Open Access Repository](https://openaccess.thecvf.com/content/CVPR2025/html/Zheng_M3amba_Memory_Mamba_is_All_You_Need_for_Whole_Slide_CVPR_2025_paper.html)
    
 - [ ] 2025 年
   

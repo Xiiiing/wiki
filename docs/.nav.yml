@@ -1,8 +1,9 @@
 nav:
-  - Home: index.md
+  - 个人主页: https://xiiiing.github.io/
+  - Wiki: index.md
   - 算法&数据结构: Algorithm
   - 开发&工程: Development
   - 科研&医学: Research
   - blog
-  - Personal: Personal
-  - About: About
+  - 个人介绍: Personal
+  - 建站记录: About

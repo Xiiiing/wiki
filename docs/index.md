@@ -1,21 +1,21 @@
 ---
-title: "Xiiiing's Wiki & Blog"
+title: "Xiiiing's Wiki"
 hide:
   - navigation
   - toc
 ---
 
-# Xiiiing's Wiki & Blog
+# Xiiiing's Wiki
 
-> 今天又被谁发现了?
+研究、工程与算法的学习记录。
 
-白嫖github,实现云盘知识查看!
+这里整理数字病理与多实例学习的阅读笔记，也记录开发实践和学习过程中的思考。
 
-慢慢学,慢慢记,以后交给GPT!
+慢慢学，慢慢记。
 
-[算法&数据结构](https://xiiiing.github.io/Algorithm/){ .md-button }
-[开发&工程](https://xiiiing.github.io/Development/){ .md-button }
-[科研&医学](https://xiiiing.github.io/Research/){ .md-button }
-[个人主页](https://xiiiing.github.io/Personal/){ .md-button }
-[Blog](https://xiiiing.github.io/blog/){ .md-button }
+[算法与数据结构](Algorithm/index.md){ .md-button }
+[开发与工程](Development/index.md){ .md-button }
+[科研与医学](Research/index.md){ .md-button }
+[随笔](blog/index.md){ .md-button }
+[个人主页](https://xiiiing.github.io/){ .md-button }
 

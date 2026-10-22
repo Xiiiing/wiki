@@ -6,6 +6,9 @@
  * - Modular: easy to extend provinces
  */
 
+// Resolve assets beside this script so the map also works under /wiki/.
+const mapAssetBase = new URL('.', document.currentScript.src);
+
 // 公共图表配置
 const commonChartOptions = {
   title: {
@@ -41,9 +44,9 @@ const commonChartOptions = {
 
 // 省份地图配置
 const provinceMapConfig = {
-  '辽宁省': { mapName: 'liaoning', jsonPath: '/_javascripts/21.json', seriesName: '辽宁地图' },
-  '四川省': { mapName: 'sichuan',  jsonPath: '/_javascripts/51.json', seriesName: '四川地图' },
-  '广东省': { mapName: 'guangdong',jsonPath: '/_javascripts/44.json', seriesName: '广东地图' }
+  '辽宁省': { mapName: 'liaoning', jsonPath: new URL('21.json', mapAssetBase), seriesName: '辽宁地图' },
+  '四川省': { mapName: 'sichuan',  jsonPath: new URL('51.json', mapAssetBase), seriesName: '四川地图' },
+  '广东省': { mapName: 'guangdong',jsonPath: new URL('44.json', mapAssetBase), seriesName: '广东地图' }
 };
 
 // 需要高亮的区域数据示例
@@ -83,6 +86,7 @@ const initMap = async ({ mapName, jsonPath, seriesName, data }) => {
 
   try {
     const res = await fetch(jsonPath);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const geoJson = await res.json();
     echarts.registerMap(mapName, geoJson);
 
@@ -130,12 +134,17 @@ function handleMapToggle(name) {
   }else {
     // 返回全国地图
     currentMap = 'china';
-    initMap({ mapName: 'china', jsonPath: '/_javascripts/china.json', seriesName: '中国地图', data: highlightData.china });
+    initMap({ mapName: 'china', jsonPath: new URL('china.json', mapAssetBase), seriesName: '中国地图', data: highlightData.china });
   }
 }
 
 // 首次加载全国地图
-initMap({ mapName: 'china', jsonPath: '/_javascripts/china.json', seriesName: '中国地图', data: highlightData.china });
+initMap({ mapName: 'china', jsonPath: new URL('china.json', mapAssetBase), seriesName: '中国地图', data: highlightData.china });
+
+const mapElement = document.querySelector('#map-container');
+if (mapElement) {
+  new ResizeObserver(() => chartInstance?.resize()).observe(mapElement);
+}
 
 
 /** 显示自动关闭的自定义弹窗 */

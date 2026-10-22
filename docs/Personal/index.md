@@ -11,7 +11,7 @@ hide:
 body {
   font-family: 'Segoe UI', sans-serif;
   line-height: 1.8;
-  color: #4b5563;
+  color: var(--md-default-fg-color);
   margin: 0;
   padding: 0;
 }
@@ -60,12 +60,12 @@ body {
 
 .text-section {
   flex: 1 1 60%;
-  min-width: 300px;
+  min-width: 0;
 }
 
 .map-section {
   flex: 1 1 35%;
-  min-width: 300px;
+  min-width: 0;
   position: relative;
 }
 
@@ -87,7 +87,7 @@ body {
 
 .section h3 {
   font-size: 1.8em;
-  color: #334155;
+  color: var(--md-default-fg-color);
   margin: 0 0 25px;
   position: relative;
   padding-left: 20px;
@@ -203,17 +203,17 @@ body {
    原有样式保留
 ====================== */
 .highlight {
-  color: #3b82f6;
+  color: var(--md-typeset-a-color);
   font-weight: 600;
 }
 
 .emphasis {
   font-style: italic;
-  color: #1e3a8a;
+  color: var(--md-typeset-a-color);
 }
 
 .intro-meta {
-  color: #1e3a8a;
+  color: var(--md-typeset-a-color);
   font-weight: 600;
   position: relative;
   text-decoration: none;
