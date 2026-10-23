@@ -20,8 +20,13 @@ img:not([alt="badge"]) {
   background: white;
 }
 
-img[alt="logo"] {
+/* Brand images are independent of article-image framing and sizing. */
+.md-header__button.md-logo img,
+.md-nav__button.md-logo img {
+  width: 1.8rem;
+  height: 1.8rem;
   border: none;
+  background: transparent;
 }
 .altium-iframe-viewer {
   height: 400px;
