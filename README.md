@@ -12,6 +12,10 @@
 <p align="center">研究、工程与算法的学习记录。慢慢学，慢慢记。</p>
 
 <p align="center">
+  <strong>知识库：</strong><a href="https://xiiiing.github.io/wiki/">xiiiing.github.io/wiki/</a>
+</p>
+
+<p align="center">
   <a href="https://xiiiing.github.io/wiki/">打开知识库</a> · <a href="https://xiiiing.github.io/wiki/Research/">研究笔记</a> · <a href="https://xiiiing.github.io/wiki/blog/">随笔</a>
 </p>
 
