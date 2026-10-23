@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title">
+<title id="title">FOLD WIKI — standard reverse</title>
+<defs>
+<mask id="cut" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="256">
+<rect width="256" height="256" fill="white"/>
+<path d="M109 109 Q124 118 142 106 L166 94 Q179 87 178 102 L164 164 Q142 154 127 135 Z" fill="black"/>
+<g fill="none" stroke="black" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+<path d="M94 96 Q115 104 115 130 V211 Q115 227 136 228"/>
+<path d="M177 93 L186 111 Q193 124 204 119 L231 107"/>
+</g>
+</mask>
+</defs>
+<g>
+<g mask="url(#cut)">
+<path d="M18 86 Q15 66 33 71 L107 101 Q120 108 135 96 L174 53 Q184 43 195 53 L233 88 Q243 98 231 107 L215 192 Q213 204 198 209 L136 228 Q124 231 112 227 L44 208 Q30 204 28 190 Z" fill="#FFFFFF"/>
+</g>
+<g fill="#FFFFFF">
+<ellipse cx="147" cy="125" rx="5.5" ry="9"/>
+<ellipse cx="164" cy="125" rx="5.5" ry="9"/>
+</g>
+</g>
+</svg>
