@@ -31,7 +31,7 @@ theme:
         name: 切换亮色模式
   language: zh
   logo: _img/logo.svg #左上角logo，可插入图片链接
-  favicon: _img/logo.svg #网页Icon
+  favicon: _img/favicon.svg #网页Icon
   features:
     - content.code.copy # 代码块复制按钮
     - content.action.edit # 文章编辑按钮
