@@ -1,3 +1,5 @@
+更多近期方法见 [2024–2026 年论文简述](论文简述/index.md)，包含中文简介、原文链接及已有笔记入口。
+
 ## ABMIL	(ICML 2018)
 
 [Attention-based Deep Multiple Instance Learning](https://arxiv.org/abs/1802.04712)
