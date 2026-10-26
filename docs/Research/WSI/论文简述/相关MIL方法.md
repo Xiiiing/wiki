@@ -6,6 +6,8 @@
 
 ## LaDM³IL
 
+[逐篇阅读笔记](../论文/相关MIL/LaDM3IL.md)
+
 **A Label Disambiguation-Based Multimodal Massive Multiple Instance Learning Approach for Immune Repertoire Classification**
 
 AAAI 2024（PDF 出版信息） · [作者代码](https://github.com/Josie-xufan/LaDM3IL)
@@ -14,6 +16,8 @@ AAAI 2024（PDF 出版信息） · [作者代码](https://github.com/Josie-xufan
 
 ## PE-MIL
 
+[逐篇阅读笔记](../论文/相关MIL/PE-MIL.md)
+
 **Prompt-Enhanced Multiple Instance Learning for Weakly Supervised Video Anomaly Detection**
 
 CVPR 2024 · [论文](https://openaccess.thecvf.com/content/CVPR2024/html/Chen_Prompt-Enhanced_Multiple_Instance_Learning_for_Weakly_Supervised_Video_Anomaly_Detection_CVPR_2024_paper.html) · [作者代码](https://github.com/Junxi-Chen/PE-MIL)
@@ -21,6 +25,8 @@ CVPR 2024 · [论文](https://openaccess.thecvf.com/content/CVPR2024/html/Chen_P
 利用异常感知提示与正常上下文提示增强视频片段特征，改善弱监督视频异常检测的事件识别与边界定位。研究对象为视频。
 
 ## HybridMIL
+
+[逐篇阅读笔记](../论文/相关MIL/HybridMIL.md)
 
 **Hybrid multiple instance learning network for weakly supervised medical image classification and localization**
 
@@ -32,6 +38,8 @@ Expert Systems with Applications 2025 · [论文](https://doi.org/10.1016/j.eswa
 
 ## DKMIL
 
+[逐篇阅读笔记](../论文/相关MIL/DKMIL.md)
+
 **Data-Driven Knowledge Fusion for Deep Multi-Instance Learning**
 
 IEEE Transactions on Neural Networks and Learning Systems 2025 · [论文](https://doi.org/10.1109/TNNLS.2024.3436944)
@@ -41,6 +49,8 @@ IEEE Transactions on Neural Networks and Learning Systems 2025 · [论文](https
 收藏在 2024 年目录，按出版卷期归入 2025 年。
 
 ## RGMIL
+
+[逐篇阅读笔记](../论文/相关MIL/RGMIL.md)
 
 **Reinforced GNNs for Multiple Instance Learning**
 
@@ -52,6 +62,8 @@ IEEE Transactions on Neural Networks and Learning Systems 2025 · [论文](https
 
 ## PSTR / RankMIL
 
+[逐篇阅读笔记](../论文/相关MIL/PSTR-RankMIL.md)
+
 **Partial Scene Text Retrieval**
 
 IEEE TPAMI 2024（PDF 出版信息） · [论文](https://arxiv.org/abs/2411.10261) · [作者代码](https://github.com/lanfeng4659/PSTR)
@@ -59,6 +71,8 @@ IEEE TPAMI 2024（PDF 出版信息） · [论文](https://arxiv.org/abs/2411.102
 将查询文本与场景文字映射到共享空间，用排序 MIL 过滤噪声，并以动态部分匹配检索文字行内部片段。研究对象为场景文字检索。
 
 ## WMRE
+
+[逐篇阅读笔记](../论文/相关MIL/WMRE.md)
 
 **WMRE: Enhancing Distant Supervised Relation Extraction with Word-level Multi-instance Learning and Multi-hierarchical Feature**
 
@@ -68,6 +82,8 @@ ICASSP 2025 · [论文](https://doi.org/10.1109/ICASSP49660.2025.10890115)
 
 ## PMITra
 
+[逐篇阅读笔记](../论文/相关MIL/PMITra.md)
+
 **Cross-domain pedestrian trajectory prediction via behavioral pattern-aware multi-instance GCN**
 
 Knowledge-Based Systems 2025 · [论文](https://doi.org/10.1016/j.knosys.2025.114266)
@@ -75,6 +91,8 @@ Knowledge-Based Systems 2025 · [论文](https://doi.org/10.1016/j.knosys.2025.1
 通过行为模式聚类、多实例图卷积及模式对齐实现跨域行人轨迹预测，属于跨领域 MIL 方法。
 
 ## MSTNet
+
+[逐篇阅读笔记](../论文/相关MIL/MSTNet.md)
 
 **MSTNet: Multi-scale spatial-aware transformer with multi-instance learning for diabetic retinopathy classification**
 
@@ -84,6 +102,8 @@ Medical Image Analysis 2025 · [论文](https://doi.org/10.1016/j.media.2025.103
 
 ## FPN-MIL
 
+[逐篇阅读笔记](../论文/相关MIL/FPN-MIL.md)
+
 **Multi-scale Attention-Based Multiple Instance Learning for Breast Cancer Diagnosis**
 
 MICCAI 2025 · [论文](https://doi.org/10.1007/978-3-032-05182-0_36) · [作者代码](https://github.com/marianamourao-37/Multi-scale-Attention-based-MIL)
@@ -91,6 +111,8 @@ MICCAI 2025 · [论文](https://doi.org/10.1007/978-3-032-05182-0_36) · [作者
 在乳腺 X 线影像中结合特征金字塔、多尺度实例聚合和深层监督，兼顾肿块与钙化病灶的不同尺度。研究对象为乳腺摄影。
 
 ## MicroMIL
+
+[逐篇阅读笔记](../论文/相关MIL/MicroMIL.md)
 
 **MicroMIL: Graph-Based Multiple Instance Learning for Context-Aware Diagnosis with Microscopic Images**
 
@@ -100,6 +122,8 @@ MICCAI 2025（PDF 与作者代码；2024 预印本合并） · [论文](https://
 
 ## MoMIL
 
+[逐篇阅读笔记](../论文/相关MIL/MoMIL.md)
+
 **MoMIL: Mixture of Multi-Instance Learners for Modeling Multiple Compound Activities in High Content Imaging**
 
 MICCAI 2025 · [论文](https://papers.miccai.org/miccai-2025/0578-Paper1746.html)
@@ -107,6 +131,8 @@ MICCAI 2025 · [论文](https://papers.miccai.org/miccai-2025/0578-Paper1746.htm
 在高内涵细胞成像中，以共享编码器和实验任务专属 MIL 学习器预测化合物活性，缓解多任务标签稀疏问题。研究对象为药物筛选。
 
 ## 超声 MIL 校准研究
+
+[逐篇阅读笔记](../论文/相关MIL/Ultrasound-MIL-Calibration.md)
 
 **Calibration in Multiple Instance Learning: Evaluating Aggregation Methods for Ultrasound-Based Diagnosis**
 
@@ -116,6 +142,8 @@ MICCAI 2025 · [论文](https://doi.org/10.1007/978-3-032-05182-0_6)
 
 ## GDF-MIL
 
+[逐篇阅读笔记](../论文/相关MIL/GDF-MIL.md)
+
 **Rethinking Multi-Instance Learning Through Graph-Driven Fusion: A Dual-Path Approach to Adaptive Representation**
 
 AAAI 2026 · [论文](https://doi.org/10.1609/aaai.v40i34.40081)
@@ -124,6 +152,8 @@ AAAI 2026 · [论文](https://doi.org/10.1609/aaai.v40i34.40081)
 
 ## GVL-MIL
 
+[逐篇阅读笔记](../论文/相关MIL/GVL-MIL.md)
+
 **Generative Vision-Language Multiple Instance Learning for Weakly Supervised Neonatal Fundus Screening and Reporting**
 
 收藏标记 CVPR 2026；本次核对 PDF，会议归属待核实 · [作者代码](https://github.com/CVIU-CSU/GVL-MIL)
@@ -131,6 +161,8 @@ AAAI 2026 · [论文](https://doi.org/10.1609/aaai.v40i34.40081)
 微调生成式视觉语言模型以产生新生儿眼底实例描述，再通过双分支 MIL 和熵感知融合进行筛查。研究对象为新生儿眼底图像。
 
 ## LML / MPEM
+
+[逐篇阅读笔记](../论文/相关MIL/LML-MPEM.md)
 
 **Learning from Majority Label: A Novel Problem in Multi-class Multiple-Instance Learning**
 

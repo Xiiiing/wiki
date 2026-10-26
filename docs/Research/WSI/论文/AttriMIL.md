@@ -53,4 +53,30 @@
 > 参考文献
 >
 > Cai, Linghan et al. “Rethinking Attention-Based Multiple Instance Learning for Whole-Slide Pathological Image Classification: An Instance Attribute Viewpoint.” *ArXiv* abs/2404.00351 (2024): n. pag.
+<!-- wsi-archive-enrichment -->
 
+#### 论文信息与实验补充
+
+> data: CAMELYON16、CAMELYON17、BCNB、TCGA-NSCLC、UniToPatho
+>
+> Medical Image Analysis 2025 · [论文](https://doi.org/10.1016/j.media.2025.103631) · [作者代码](https://github.com/MedCAI/AttriMIL)
+
+##### 方法补充
+
+（1）属性评分：结合注意力与分类分支，估计实例对包预测的实际贡献。
+
+（2）片内/片间约束：分别利用空间邻近与跨片语义相似性。
+
+（3）特征适配：用病理任务信号进一步调整预训练编码器。
+
+##### 实验设置
+
+覆盖肿瘤检测、腋窝淋巴结转移预测、肺癌亚型、肿瘤分级及外部泛化。
+
+##### 主要结果补充
+
+BCNB 中增强 TransMIL 后，AUC/F1/ACC 增益分别为 3.4/6.7/4.3 个百分点；需保留预训练 backbone 条件。
+
+##### 消融与讨论
+
+分别考察多分支属性评分、区域约束、切片约束与病理自适应学习，区分切片分类和病灶定位证据。
