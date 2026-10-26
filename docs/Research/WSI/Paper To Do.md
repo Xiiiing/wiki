@@ -1,5 +1,7 @@
 # Paper To Do
 
+近期收藏的论文已整理为 [2024–2026 年论文简述](论文简述/index.md) 和 [逐篇论文归档](论文/index.md)，后者每篇一个 Markdown，记录方法、实验与结果；本页继续记录阅读进度。
+
 ## 综述
 
 - [ ] Song, Andrew H., et al. "Artificial intelligence for digital and computational pathology." Nature Reviews Bioengineering 1.12 (2023): 930-949.
