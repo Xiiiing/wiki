@@ -16,9 +16,18 @@
 
 （3）平滑过渡：训练中逐步调整两类目标的侧重，处理标签不平衡。
 
-![SC-MIL：方法相关图示](assest/SC-MIL/method-archive.webp)
+<!-- wsi-complete-model -->
+##### 模型结构图
 
-原文Figure 2，PDF 第 3 页。
+**图 2 · 模型结构**（PDF 第 3 页）
+
+[![SC-MIL：图 2，模型结构](assest/SC-MIL/figure-2-complete.webp)](assest/SC-MIL/figure-2-complete.webp)
+
+> 原文图注：Figure 2. SC-MIL integrates supervised contrastive learning into the MIL framework. The model performs joint feature and classifier learning on bag representations computed using an attention-based aggregation on patches. The training objective transitions progressively from a contrastive to a classification loss.
+
+[查看原尺寸](assest/SC-MIL/figure-2-complete.webp)
+
+<!-- /wsi-complete-model -->
 
 #### 实验
 
@@ -30,9 +39,69 @@
 
 核心证据是在多种不平衡程度和域外数据上比较稳定收益，而不是只在平衡训练集比较平均 AUC。
 
-![SC-MIL：实验对照表](assest/SC-MIL/results-archive.webp)
+<!-- wsi-complete-results -->
+##### 完整实验指标与对照
 
-原文Table 3，PDF 第 4 页。
+下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+
+| 原表/图中指标 | 读取方式 |
+| --- | --- |
+| ROC-AUC / AUROC | 越高越好；若原表明确为 PR-AUC，则按 PR 曲线面积读取 |
+| F1 | 越高越好；保留 macro / weighted / micro 等平均方式 |
+
+| 原文页 | 阅读内容 | 图表及正文引用 |
+| --- | --- | --- |
+| PDF 第 2 页 | 实验结果 | Table 1 |
+| PDF 第 3 页 | 实验结果 | Table 2 |
+| PDF 第 4 页 | 实验结果 | Table 3、Table 4 |
+| PDF 第 5 页 | 实验结果 | Table 5、Table 6 |
+| PDF 第 6 页 | 实验结果 | Figure 3 |
+| PDF 第 7 页 | 实验结果 | Figure 4、Table 7 |
+| PDF 第 8 页 | 实验结果 | Table 8、Table 9 |
+
+**实验原页 · PDF 第 2 页**（图表及正文引用：Table 1）
+
+[![SC-MIL：PDF 第 2 页完整实验内容](assest/SC-MIL/experiment-page-02.webp)](assest/SC-MIL/experiment-page-02.webp)
+
+[查看原尺寸](assest/SC-MIL/experiment-page-02.webp)
+
+**实验原页 · PDF 第 3 页**（图表及正文引用：Table 2）
+
+[![SC-MIL：PDF 第 3 页完整实验内容](assest/SC-MIL/experiment-page-03.webp)](assest/SC-MIL/experiment-page-03.webp)
+
+[查看原尺寸](assest/SC-MIL/experiment-page-03.webp)
+
+**实验原页 · PDF 第 4 页**（图表及正文引用：Table 3、Table 4）
+
+[![SC-MIL：PDF 第 4 页完整实验内容](assest/SC-MIL/experiment-page-04.webp)](assest/SC-MIL/experiment-page-04.webp)
+
+[查看原尺寸](assest/SC-MIL/experiment-page-04.webp)
+
+**实验原页 · PDF 第 5 页**（图表及正文引用：Table 5、Table 6）
+
+[![SC-MIL：PDF 第 5 页完整实验内容](assest/SC-MIL/experiment-page-05.webp)](assest/SC-MIL/experiment-page-05.webp)
+
+[查看原尺寸](assest/SC-MIL/experiment-page-05.webp)
+
+**实验原页 · PDF 第 6 页**（图表及正文引用：Figure 3）
+
+[![SC-MIL：PDF 第 6 页完整实验内容](assest/SC-MIL/experiment-page-06.webp)](assest/SC-MIL/experiment-page-06.webp)
+
+[查看原尺寸](assest/SC-MIL/experiment-page-06.webp)
+
+**实验原页 · PDF 第 7 页**（图表及正文引用：Figure 4、Table 7）
+
+[![SC-MIL：PDF 第 7 页完整实验内容](assest/SC-MIL/experiment-page-07.webp)](assest/SC-MIL/experiment-page-07.webp)
+
+[查看原尺寸](assest/SC-MIL/experiment-page-07.webp)
+
+**实验原页 · PDF 第 8 页**（图表及正文引用：Table 8、Table 9）
+
+[![SC-MIL：PDF 第 8 页完整实验内容](assest/SC-MIL/experiment-page-08.webp)](assest/SC-MIL/experiment-page-08.webp)
+
+[查看原尺寸](assest/SC-MIL/experiment-page-08.webp)
+
+<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 
