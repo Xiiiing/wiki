@@ -16,9 +16,18 @@
 
 （3）图聚合：学习局部与跨图像上下文，生成患者级预测。
 
-![MicroMIL：方法相关图示](../assest/MicroMIL/method-archive.webp)
+<!-- wsi-complete-model -->
+##### 模型结构图
 
-原文Fig. 2，PDF 第 4 页。
+**图 2 · 模型结构**（PDF 第 4 页）
+
+[![MicroMIL：图 2，模型结构](../assest/MicroMIL/figure-2-complete.webp)](../assest/MicroMIL/figure-2-complete.webp)
+
+> 原文图注：Fig. 2. Proposed end-to-end MicroMIL framework.
+
+[查看原尺寸](../assest/MicroMIL/figure-2-complete.webp)
+
+<!-- /wsi-complete-model -->
 
 #### 实验
 
@@ -30,9 +39,36 @@
 
 高冗余训练/测试设置使部分基线退化，MicroMIL 在相关对照中更稳定；输入无需已知绝对空间位置。
 
-![MicroMIL：实验对照表](../assest/MicroMIL/results-archive.webp)
+<!-- wsi-complete-results -->
+##### 完整实验指标与对照
 
-原文Table 1，PDF 第 6 页。
+下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+
+| 原文页 | 阅读内容 | 图表及正文引用 |
+| --- | --- | --- |
+| PDF 第 6 页 | 实验结果 | Table 1 |
+| PDF 第 7 页 | 实验结果 | Figure 4 |
+| PDF 第 8 页 | 实验结果 | Figure 5、Figure 6、Table 2 |
+
+**实验原页 · PDF 第 6 页**（图表及正文引用：Table 1）
+
+[![MicroMIL：PDF 第 6 页完整实验内容](../assest/MicroMIL/experiment-page-06.webp)](../assest/MicroMIL/experiment-page-06.webp)
+
+[查看原尺寸](../assest/MicroMIL/experiment-page-06.webp)
+
+**实验原页 · PDF 第 7 页**（图表及正文引用：Figure 4）
+
+[![MicroMIL：PDF 第 7 页完整实验内容](../assest/MicroMIL/experiment-page-07.webp)](../assest/MicroMIL/experiment-page-07.webp)
+
+[查看原尺寸](../assest/MicroMIL/experiment-page-07.webp)
+
+**实验原页 · PDF 第 8 页**（图表及正文引用：Figure 5、Figure 6、Table 2）
+
+[![MicroMIL：PDF 第 8 页完整实验内容](../assest/MicroMIL/experiment-page-08.webp)](../assest/MicroMIL/experiment-page-08.webp)
+
+[查看原尺寸](../assest/MicroMIL/experiment-page-08.webp)
+
+<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

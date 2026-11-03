@@ -16,9 +16,18 @@
 
 （3）DMGC：压缩模型和梯度通信，降低分布式训练开销。
 
-![DPGS / DMGC：方法相关图示](assest/DPGS-DMGC/method-archive.webp)
+<!-- wsi-complete-model -->
+##### 模型结构图
 
-原文Figure 1，PDF 第 1 页。
+**图 2 · 模型结构**（PDF 第 3 页）
+
+[![DPGS / DMGC：图 2，模型结构](assest/DPGS-DMGC/figure-2-complete.webp)](assest/DPGS-DMGC/figure-2-complete.webp)
+
+> 原文图注：Figure 2. The proposed DPGS framework begins by parallelizing models and feeding variable-length data packets for gradient computation. Gradients from parallel models undergo DMGC compression prior to transmission to the master server. The master server aggregates gradients, updates models, applies DMGC compression to weights, and returns them to training servers. Red-numbered annotations in the figure depict the training loop process, with model replication occurring solely during initialization. Multi-threaded validation runs concurrently with the master process.
+
+[查看原尺寸](assest/DPGS-DMGC/figure-2-complete.webp)
+
+<!-- /wsi-complete-model -->
 
 #### 实验
 
@@ -29,6 +38,61 @@
 ##### 主要结果
 
 TCGA-Lung 上 ABMIL 的 ACC 从 92.38% 到 93.90%，收敛时间从 636.3s 到 20.0s；该加速属于对应实现与硬件设置。
+
+<!-- wsi-complete-results -->
+##### 完整实验指标与对照
+
+下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+
+| 原表/图中指标 | 读取方式 |
+| --- | --- |
+| ACC / Accuracy | 越高越好；平衡准确率、平均准确率以原表标注为准 |
+| 时间 / FLOPs / 参数量 | 结合硬件、包长度和计时范围比较；小模型不一定推理更快 |
+
+| 原文页 | 阅读内容 | 图表及正文引用 |
+| --- | --- | --- |
+| PDF 第 5 页 | 实验结果 | Table 1 |
+| PDF 第 6 页 | 实验结果 | Table 2、Table 3 |
+| PDF 第 7 页 | 实验结果 | Table 4 |
+| PDF 第 8 页 | 消融与参数分析 | Figure 4、Table 5 |
+| PDF 第 9 页 | 实验结果 | Figure 5、Table 6 |
+
+**实验原页 · PDF 第 5 页**（图表及正文引用：Table 1）
+
+[![DPGS / DMGC：PDF 第 5 页完整实验内容](assest/DPGS-DMGC/experiment-page-05.webp)](assest/DPGS-DMGC/experiment-page-05.webp)
+
+[查看原尺寸](assest/DPGS-DMGC/experiment-page-05.webp)
+
+**实验原页 · PDF 第 6 页**（图表及正文引用：Table 2、Table 3）
+
+[![DPGS / DMGC：PDF 第 6 页完整实验内容](assest/DPGS-DMGC/experiment-page-06.webp)](assest/DPGS-DMGC/experiment-page-06.webp)
+
+[查看原尺寸](assest/DPGS-DMGC/experiment-page-06.webp)
+
+**实验原页 · PDF 第 7 页**（图表及正文引用：Table 4）
+
+[![DPGS / DMGC：PDF 第 7 页完整实验内容](assest/DPGS-DMGC/experiment-page-07.webp)](assest/DPGS-DMGC/experiment-page-07.webp)
+
+[查看原尺寸](assest/DPGS-DMGC/experiment-page-07.webp)
+
+**实验原页 · PDF 第 9 页**（图表及正文引用：Figure 5、Table 6）
+
+[![DPGS / DMGC：PDF 第 9 页完整实验内容](assest/DPGS-DMGC/experiment-page-09.webp)](assest/DPGS-DMGC/experiment-page-09.webp)
+
+[查看原尺寸](assest/DPGS-DMGC/experiment-page-09.webp)
+
+<details markdown="1">
+<summary>展开消融、参数、数据设置及效率原页</summary>
+
+**实验原页 · PDF 第 8 页**（图表及正文引用：Figure 4、Table 5）
+
+[![DPGS / DMGC：PDF 第 8 页完整实验内容](assest/DPGS-DMGC/experiment-page-08.webp)](assest/DPGS-DMGC/experiment-page-08.webp)
+
+[查看原尺寸](assest/DPGS-DMGC/experiment-page-08.webp)
+
+</details>
+
+<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

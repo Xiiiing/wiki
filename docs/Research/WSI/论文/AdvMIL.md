@@ -16,9 +16,18 @@
 
 （3）半监督学习：无标签切片可参与对抗训练，有标签切片提供真实结局约束。
 
-![AdvMIL：方法相关图示](assest/AdvMIL/method-archive.webp)
+<!-- wsi-complete-model -->
+##### 模型结构图
 
-原文Fig. 3，PDF 第 4 页。
+**图 3 · 模型结构**（PDF 第 4 页）
+
+[![AdvMIL：图 3，模型结构](assest/AdvMIL/figure-3-complete.webp)](assest/AdvMIL/figure-3-complete.webp)
+
+> 原文图注：Fig. 3. AdvMIL overview. A gigapixel WSI is transformed into individual patches and the patches with equal region partition by big-to-small patching. A general MIL encoder is adopted as the backbone of conditional generator. An RLIP (region-level instance projection) fusion network is proposed to implement discriminator, elaborated in Fig. 4. Conditional generator is optimized by both cgan and sl. Noise is given by a high-dimensional vector with certain distribution.
+
+[查看原尺寸](assest/AdvMIL/figure-3-complete.webp)
+
+<!-- /wsi-complete-model -->
 
 #### 实验
 
@@ -30,9 +39,59 @@
 
 收益包括事件时间分布估计及利用无标签切片；无标签样本只参与对应的对抗目标，而非凭空获得真实生存标签。
 
-![AdvMIL：实验对照表](assest/AdvMIL/results-archive.webp)
+<!-- wsi-complete-results -->
+##### 完整实验指标与对照
 
-原文Table 3，PDF 第 7 页。
+下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+
+| 原表/图中指标 | 读取方式 |
+| --- | --- |
+| C-index | 越高越好；用于生存预测，需保留终点及删失设置 |
+
+| 原文页 | 阅读内容 | 图表及正文引用 |
+| --- | --- | --- |
+| PDF 第 2 页 | 实验结果 | Figure 2 |
+| PDF 第 6 页 | 数据与实验设置 | Figure 5、Table 1、Table 2 |
+| PDF 第 7 页 | 实验结果 | Table 3、Table 4 |
+| PDF 第 9 页 | 实验结果 | Table 5、Table 6、Table 7 |
+| PDF 第 10 页 | 实验结果 | Table 8、Figure 10 |
+
+**实验原页 · PDF 第 2 页**（图表及正文引用：Figure 2）
+
+[![AdvMIL：PDF 第 2 页完整实验内容](assest/AdvMIL/experiment-page-02.webp)](assest/AdvMIL/experiment-page-02.webp)
+
+[查看原尺寸](assest/AdvMIL/experiment-page-02.webp)
+
+**实验原页 · PDF 第 7 页**（图表及正文引用：Table 3、Table 4）
+
+[![AdvMIL：PDF 第 7 页完整实验内容](assest/AdvMIL/experiment-page-07.webp)](assest/AdvMIL/experiment-page-07.webp)
+
+[查看原尺寸](assest/AdvMIL/experiment-page-07.webp)
+
+**实验原页 · PDF 第 9 页**（图表及正文引用：Table 5、Table 6、Table 7）
+
+[![AdvMIL：PDF 第 9 页完整实验内容](assest/AdvMIL/experiment-page-09.webp)](assest/AdvMIL/experiment-page-09.webp)
+
+[查看原尺寸](assest/AdvMIL/experiment-page-09.webp)
+
+**实验原页 · PDF 第 10 页**（图表及正文引用：Table 8、Figure 10）
+
+[![AdvMIL：PDF 第 10 页完整实验内容](assest/AdvMIL/experiment-page-10.webp)](assest/AdvMIL/experiment-page-10.webp)
+
+[查看原尺寸](assest/AdvMIL/experiment-page-10.webp)
+
+<details markdown="1">
+<summary>展开消融、参数、数据设置及效率原页</summary>
+
+**实验原页 · PDF 第 6 页**（图表及正文引用：Figure 5、Table 1、Table 2）
+
+[![AdvMIL：PDF 第 6 页完整实验内容](assest/AdvMIL/experiment-page-06.webp)](assest/AdvMIL/experiment-page-06.webp)
+
+[查看原尺寸](assest/AdvMIL/experiment-page-06.webp)
+
+</details>
+
+<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

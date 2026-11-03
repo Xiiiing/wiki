@@ -16,9 +16,16 @@
 
 （3）跨中心实验：用留一中心测试检查域外过度自信。
 
-![超声 MIL 校准研究：方法相关图示](../assest/Ultrasound-MIL-Calibration/method-archive.webp)
+<!-- wsi-complete-model -->
+##### 模型结构图
 
-原文Fig. 1，PDF 第 6 页。
+本文比较多种 MIL 聚合策略，未提出单一新模型结构。下图依据 PDF 第 2–3、5 页的方法与实现设置整理，不是原文图片。
+
+[![超声 MIL 校准研究：依据正文整理的模型流程图](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)
+
+[查看原尺寸](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)
+
+<!-- /wsi-complete-model -->
 
 #### 实验
 
@@ -30,9 +37,29 @@
 
 注意力聚合可能有更强判别力但更过度自信；简单实例概率池化在部分条件下校准更可靠。
 
-![超声 MIL 校准研究：实验对照表](../assest/Ultrasound-MIL-Calibration/results-archive.webp)
+<!-- wsi-complete-results -->
+##### 完整实验指标与对照
 
-原文Table 1，PDF 第 8 页。
+下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+
+| 原文页 | 阅读内容 | 图表及正文引用 |
+| --- | --- | --- |
+| PDF 第 6 页 | 实验结果 | Figure 1 |
+| PDF 第 8 页 | 实验结果 | Table 1 |
+
+**实验原页 · PDF 第 6 页**（图表及正文引用：Figure 1）
+
+[![超声 MIL 校准研究：PDF 第 6 页完整实验内容](../assest/Ultrasound-MIL-Calibration/experiment-page-06.webp)](../assest/Ultrasound-MIL-Calibration/experiment-page-06.webp)
+
+[查看原尺寸](../assest/Ultrasound-MIL-Calibration/experiment-page-06.webp)
+
+**实验原页 · PDF 第 8 页**（图表及正文引用：Table 1）
+
+[![超声 MIL 校准研究：PDF 第 8 页完整实验内容](../assest/Ultrasound-MIL-Calibration/experiment-page-08.webp)](../assest/Ultrasound-MIL-Calibration/experiment-page-08.webp)
+
+[查看原尺寸](../assest/Ultrasound-MIL-Calibration/experiment-page-08.webp)
+
+<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

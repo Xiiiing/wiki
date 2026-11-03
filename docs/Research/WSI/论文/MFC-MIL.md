@@ -16,9 +16,18 @@
 
 （3）因果记忆：CMIM 用可训练记忆近似整体分布并实施干预式融合。
 
-![MFC-MIL：方法相关图示](assest/MFC-MIL/method-archive.webp)
+<!-- wsi-complete-model -->
+##### 模型结构图
 
-原文Figure 1，PDF 第 3 页。
+**图 1 · 模型结构**（PDF 第 3 页）
+
+[![MFC-MIL：图 1，模型结构](assest/MFC-MIL/figure-1-complete.webp)](assest/MFC-MIL/figure-1-complete.webp)
+
+> 原文图注：Figure 1: (a) WSI sample. (b-d) Causal diagrams for no intervention, back-door intervention, and front-door intervention. (e) We propose Multi-Scale Frequency Domain Causal Multi-Instance Learning (MFC-MIL), a framework that is plug-and-play compatible with various MIL models. In the MIL model, WSI is typically encoded as CLS tokens and feature tokens (patch tokens). Our MFC framework extends this approach by applying the MSRM and FSRM modules specifically to the feature tokens. The output from these modules is then fed into the memory module of the CMIM for interaction, ultimately influencing the CLS token.
+
+[查看原尺寸](assest/MFC-MIL/figure-1-complete.webp)
+
+<!-- /wsi-complete-model -->
 
 #### 实验
 
@@ -30,9 +39,45 @@ TCGA 按 7:1:2 划分；主表报告五折结果，比较 MFC-MIL、IBMIL 及不
 
 因果记忆干预增强特异度，但作者同时指出 recall 可能下降，说明决策边界存在敏感度/特异度权衡。
 
-![MFC-MIL：实验对照表](assest/MFC-MIL/results-archive.webp)
+<!-- wsi-complete-results -->
+##### 完整实验指标与对照
 
-原文Table 2，PDF 第 8 页。
+下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+
+| 原表/图中指标 | 读取方式 |
+| --- | --- |
+| Recall / Sensitivity | 越高越好；与固定敏感度下的特异度区别读取 |
+
+| 原文页 | 阅读内容 | 图表及正文引用 |
+| --- | --- | --- |
+| PDF 第 8 页 | 实验结果 | Table 1、Table 2、Table 3 |
+| PDF 第 9 页 | 消融与参数分析 | Figure 3、Table 4 |
+| PDF 第 16 页 | 实验结果 | Table 5、Table 6、Table 7 |
+
+**实验原页 · PDF 第 8 页**（图表及正文引用：Table 1、Table 2、Table 3）
+
+[![MFC-MIL：PDF 第 8 页完整实验内容](assest/MFC-MIL/experiment-page-08.webp)](assest/MFC-MIL/experiment-page-08.webp)
+
+[查看原尺寸](assest/MFC-MIL/experiment-page-08.webp)
+
+**实验原页 · PDF 第 16 页**（图表及正文引用：Table 5、Table 6、Table 7）
+
+[![MFC-MIL：PDF 第 16 页完整实验内容](assest/MFC-MIL/experiment-page-16.webp)](assest/MFC-MIL/experiment-page-16.webp)
+
+[查看原尺寸](assest/MFC-MIL/experiment-page-16.webp)
+
+<details markdown="1">
+<summary>展开消融、参数、数据设置及效率原页</summary>
+
+**实验原页 · PDF 第 9 页**（图表及正文引用：Figure 3、Table 4）
+
+[![MFC-MIL：PDF 第 9 页完整实验内容](assest/MFC-MIL/experiment-page-09.webp)](assest/MFC-MIL/experiment-page-09.webp)
+
+[查看原尺寸](assest/MFC-MIL/experiment-page-09.webp)
+
+</details>
+
+<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

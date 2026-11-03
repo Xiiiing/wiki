@@ -16,9 +16,18 @@
 
 （3）概率推导：由模型结构与权重估计实例阳性概率，而非直接使用归一化注意力。
 
-![TKA-MIL：方法相关图示](assest/TKA-MIL/method-archive.webp)
+<!-- wsi-complete-model -->
+##### 模型结构图
 
-原文Fig. 1，PDF 第 3 页。
+**图 1 · 模型结构**（PDF 第 3 页）
+
+[![TKA-MIL：图 1，模型结构](assest/TKA-MIL/figure-1-complete.webp)](assest/TKA-MIL/figure-1-complete.webp)
+
+> 原文图注：Fig. 1: Overall model framework, including WSI preprocessing for feature extraction and the MIL aggregator. The latter is a dual-stream network for joint learning and inference, with TKA-MIL selecting the top K critical instances from AB-MIL.
+
+[查看原尺寸](assest/TKA-MIL/figure-1-complete.webp)
+
+<!-- /wsi-complete-model -->
 
 #### 实验
 
@@ -30,9 +39,22 @@ C16 在官方训练部分做五折；TCGA 采用 6:1.5:2.5 的四折划分；训
 
 C16 上优于比较基线，TCGA 与 TransMIL/RRT-MIL 相近，同时计算复杂度更低；不能只看单一最优指标。
 
-![TKA-MIL：实验对照表](assest/TKA-MIL/results-archive.webp)
+<!-- wsi-complete-results -->
+##### 完整实验指标与对照
 
-原文TABLE I，PDF 第 4 页。
+下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+
+| 原文页 | 阅读内容 | 图表及正文引用 |
+| --- | --- | --- |
+| PDF 第 4 页 | 实验结果 | Table I、Table II |
+
+**实验原页 · PDF 第 4 页**（图表及正文引用：Table I、Table II）
+
+[![TKA-MIL：PDF 第 4 页完整实验内容](assest/TKA-MIL/experiment-page-04.webp)](assest/TKA-MIL/experiment-page-04.webp)
+
+[查看原尺寸](assest/TKA-MIL/experiment-page-04.webp)
+
+<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 
