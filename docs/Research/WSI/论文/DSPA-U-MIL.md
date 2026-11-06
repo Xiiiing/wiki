@@ -16,18 +16,11 @@
 
 （3）EDL 正则与蒸馏：降低标签噪声并保持专家概念引导的患者分级。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-**图 3 · 模型结构**（PDF 第 5 页）
+[![DSPA-U-MIL 模型结构](assest/DSPA-U-MIL/figure-3-complete.webp)](assest/DSPA-U-MIL/figure-3-complete.webp)
 
-[![DSPA-U-MIL：图 3，模型结构](assest/DSPA-U-MIL/figure-3-complete.webp)](assest/DSPA-U-MIL/figure-3-complete.webp)
-
-> 原文图注：Fig. 3. Overview of our proposed DSPA-U-MIL framework. (a) Expert concept induction with a Large Language Model (LLM). (b) Selective GP aggregation with an orthogonal decomposition constraint. (c) Expert concept-guided similarity aggregation, and (d) Knowledge distillation-based GG prediction.
-
-[查看原尺寸](assest/DSPA-U-MIL/figure-3-complete.webp)
-
-<!-- /wsi-complete-model -->
+图 3（PDF 第 5 页）
 
 #### 实验
 
@@ -35,71 +28,20 @@
 
 同时含 WSI 和 TMA，以 QWK 为主；比较会议版和加入扩展模块后的分级。
 
-##### 主要结果
+##### 关键指标 { #key-results }
+
+| 数据集 | AUC（%） | QWK（%） |
+| --- | --- | --- |
+| Radboud | 82.6 ± 0.8 | 82.8 ± 0.6 |
+| SICAPv2 | 82.0 ± 4.0 | 75.1 ± 2.1 |
+| TCGA-PRAD | 81.3 ± 1.3 | 79.4 ± 4.2 |
+| Vancouver | 72.8 ± 1.3 | 71.4 ± 2.2 |
+
+数据来源为原文表 2，PDF 第 10 页，Gleason Grade Group。
+
+##### 结果解读
 
 Radboud 与 Vancouver 的损失权重改变会明显影响 QWK，不能把单一默认权重视为跨来源通用最优。
-
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
-
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
-
-| 原表/图中指标 | 读取方式 |
-| --- | --- |
-| F1 | 越高越好；保留 macro / weighted / micro 等平均方式 |
-| Kappa / QWK | 越高越好；加权方式与类别顺序以原表为准 |
-
-| 原文页 | 阅读内容 | 图表及正文引用 |
-| --- | --- | --- |
-| PDF 第 8 页 | 数据与实验设置 | Table 1 |
-| PDF 第 9 页 | 实验结果 | Figure 5 |
-| PDF 第 10 页 | 实验结果 | Table 2、Table 3 |
-| PDF 第 11 页 | 消融与参数分析 | Table 4、Table 5 |
-| PDF 第 12 页 | 消融与参数分析 | Figure 7、Table 6 |
-| PDF 第 14 页 | 消融与参数分析 | Table 7 |
-
-**实验原页 · PDF 第 9 页**（图表及正文引用：Figure 5）
-
-[![DSPA-U-MIL：PDF 第 9 页完整实验内容](assest/DSPA-U-MIL/experiment-page-09.webp)](assest/DSPA-U-MIL/experiment-page-09.webp)
-
-[查看原尺寸](assest/DSPA-U-MIL/experiment-page-09.webp)
-
-**实验原页 · PDF 第 10 页**（图表及正文引用：Table 2、Table 3）
-
-[![DSPA-U-MIL：PDF 第 10 页完整实验内容](assest/DSPA-U-MIL/experiment-page-10.webp)](assest/DSPA-U-MIL/experiment-page-10.webp)
-
-[查看原尺寸](assest/DSPA-U-MIL/experiment-page-10.webp)
-
-<details markdown="1">
-<summary>展开消融、参数、数据设置及效率原页</summary>
-
-**实验原页 · PDF 第 8 页**（图表及正文引用：Table 1）
-
-[![DSPA-U-MIL：PDF 第 8 页完整实验内容](assest/DSPA-U-MIL/experiment-page-08.webp)](assest/DSPA-U-MIL/experiment-page-08.webp)
-
-[查看原尺寸](assest/DSPA-U-MIL/experiment-page-08.webp)
-
-**实验原页 · PDF 第 11 页**（图表及正文引用：Table 4、Table 5）
-
-[![DSPA-U-MIL：PDF 第 11 页完整实验内容](assest/DSPA-U-MIL/experiment-page-11.webp)](assest/DSPA-U-MIL/experiment-page-11.webp)
-
-[查看原尺寸](assest/DSPA-U-MIL/experiment-page-11.webp)
-
-**实验原页 · PDF 第 12 页**（图表及正文引用：Figure 7、Table 6）
-
-[![DSPA-U-MIL：PDF 第 12 页完整实验内容](assest/DSPA-U-MIL/experiment-page-12.webp)](assest/DSPA-U-MIL/experiment-page-12.webp)
-
-[查看原尺寸](assest/DSPA-U-MIL/experiment-page-12.webp)
-
-**实验原页 · PDF 第 14 页**（图表及正文引用：Table 7）
-
-[![DSPA-U-MIL：PDF 第 14 页完整实验内容](assest/DSPA-U-MIL/experiment-page-14.webp)](assest/DSPA-U-MIL/experiment-page-14.webp)
-
-[查看原尺寸](assest/DSPA-U-MIL/experiment-page-14.webp)
-
-</details>
-
-<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

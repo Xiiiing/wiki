@@ -16,16 +16,11 @@
 
 （3）跨中心实验：用留一中心测试检查域外过度自信。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-本文比较多种 MIL 聚合策略，未提出单一新模型结构。下图依据 PDF 第 2–3、5 页的方法与实现设置整理，不是原文图片。
+[![超声 MIL 校准研究 流程示意](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)
 
-[![超声 MIL 校准研究：依据正文整理的模型流程图](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)
-
-[查看原尺寸](../assest/Ultrasound-MIL-Calibration/structure-from-methods.svg)
-
-<!-- /wsi-complete-model -->
+按 PDF 第 2–3、5 页绘制。本文比较多种聚合策略，此图概括各策略共用的输入、特征提取和评价流程。
 
 #### 实验
 
@@ -33,33 +28,18 @@
 
 比较按患者五折的域内评估与留一中心的域外评估，同时报告判别力和校准误差。
 
-##### 主要结果
+##### 关键指标 { #key-results }
 
-注意力聚合可能有更强判别力但更过度自信；简单实例概率池化在部分条件下校准更可靠。
+| 聚合方式 | AUC | ECE ↓ | Brier ↓ |
+| --- | --- | --- | --- |
+| 实例概率均值 | 0.905（0.889–0.920） | 0.033（0.026–0.054） | 0.120（0.110–0.130） |
+| 门控注意力 + 不确定性 | 0.908（0.892–0.922） | 0.093（0.077–0.112） | 0.131（0.118–0.145） |
 
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
+数据来源为原文表 1，PDF 第 8 页，患者级五折验证，括号为 95% CI。
 
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+##### 结果解读
 
-| 原文页 | 阅读内容 | 图表及正文引用 |
-| --- | --- | --- |
-| PDF 第 6 页 | 实验结果 | Figure 1 |
-| PDF 第 8 页 | 实验结果 | Table 1 |
-
-**实验原页 · PDF 第 6 页**（图表及正文引用：Figure 1）
-
-[![超声 MIL 校准研究：PDF 第 6 页完整实验内容](../assest/Ultrasound-MIL-Calibration/experiment-page-06.webp)](../assest/Ultrasound-MIL-Calibration/experiment-page-06.webp)
-
-[查看原尺寸](../assest/Ultrasound-MIL-Calibration/experiment-page-06.webp)
-
-**实验原页 · PDF 第 8 页**（图表及正文引用：Table 1）
-
-[![超声 MIL 校准研究：PDF 第 8 页完整实验内容](../assest/Ultrasound-MIL-Calibration/experiment-page-08.webp)](../assest/Ultrasound-MIL-Calibration/experiment-page-08.webp)
-
-[查看原尺寸](../assest/Ultrasound-MIL-Calibration/experiment-page-08.webp)
-
-<!-- /wsi-complete-results -->
+域内评估里，注意力加不确定性与实例均值池化的 AUC 很接近。实例均值的校准误差和 Brier 分数更低，说明模型选型还取决于是否需要可靠的概率。
 
 ##### 消融与讨论
 

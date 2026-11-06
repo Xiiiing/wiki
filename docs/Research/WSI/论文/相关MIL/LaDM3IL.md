@@ -16,18 +16,11 @@
 
 （3）多模态融合：用门控注意力及张量融合聚合受体信息，输出组库与受体预测。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-**图 2 · 模型结构**（PDF 第 4 页）
+[![LaDM³IL 模型结构](../assest/LaDM3IL/figure-2-complete.webp)](../assest/LaDM3IL/figure-2-complete.webp)
 
-[![LaDM³IL：图 2，模型结构](../assest/LaDM3IL/figure-2-complete.webp)](../assest/LaDM3IL/figure-2-complete.webp)
-
-> 原文图注：Figure 2: The overall framework of LaDM3IL, which consists of a feature extractor, a label disambiguation module and an aggregation module. a) Feature Extractor: A pre-trained model SC-AIR-BERT (Zhao et al. 2023) works as the sequence encoder to embed the sequence and a trainable embedding layer works as a gene encoder to embed the V(D)J gene segments. Gating- based attention mechanism and a tensor fusion module are applied to integrate the learnt gene and AA sequence features. b) Label Disambiguation (To facilitate a clearer understanding of the core concept, we present the binary classification scenario as an exemplar in this figure, as it offers a more straightforward illustration.): The prototype is generated to represent the feature embedding of each class. During the training process, the top-K receptors will be selected to update the embedding of the corresponding class in the prototype and the label of each receptor will be adjusted according to the similarity between the receptors’ feature embedding and prototypes’ feature embedding. c) Aggregation Module: After obtaining the prediction of each receptor from the classifier (multilayer perception), the aggregating module integrates these predictions by multiplying them with their corresponding frequencies and subsequently normalizing the results to generate the repertoire-level prediction.
-
-[查看原尺寸](../assest/LaDM3IL/figure-2-complete.webp)
-
-<!-- /wsi-complete-model -->
+图 2（PDF 第 4 页）
 
 #### 实验
 
@@ -35,44 +28,18 @@
 
 CMV 使用完整信息的 684 个组库；癌症数据训练/测试受体数为 70,000/20,000，并开展五折评估。
 
-##### 主要结果
+##### 关键指标 { #key-results }
 
-相对次优方法，两个任务的 AUC 分别提高 1.64 和 1.19 个百分点；输入是免疫受体序列与基因信息。
+| 任务 | AUC（%） | ACC（%） | F1（%） |
+| --- | --- | --- | --- |
+| CMV 组库分类 | 84.88 ± 2.20 | 78.80 ± 2.30 | 78.56 ± 2.40 |
+| 癌症相关受体识别 | 90.22 ± 0.33 | 83.00 ± 0.57 | 80.59 ± 0.37 |
 
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
+数据来源为原文表 2，PDF 第 6 页。
 
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+##### 结果解读
 
-| 原表/图中指标 | 读取方式 |
-| --- | --- |
-| ROC-AUC / AUROC | 越高越好；若原表明确为 PR-AUC，则按 PR 曲线面积读取 |
-
-| 原文页 | 阅读内容 | 图表及正文引用 |
-| --- | --- | --- |
-| PDF 第 2 页 | 实验结果 | Figure 1 |
-| PDF 第 6 页 | 实验结果 | Table 1、Table 2、Table 3 |
-| PDF 第 7 页 | 实验结果 | Figure 3、Table 4、Figure 4 |
-
-**实验原页 · PDF 第 2 页**（图表及正文引用：Figure 1）
-
-[![LaDM³IL：PDF 第 2 页完整实验内容](../assest/LaDM3IL/experiment-page-02.webp)](../assest/LaDM3IL/experiment-page-02.webp)
-
-[查看原尺寸](../assest/LaDM3IL/experiment-page-02.webp)
-
-**实验原页 · PDF 第 6 页**（图表及正文引用：Table 1、Table 2、Table 3）
-
-[![LaDM³IL：PDF 第 6 页完整实验内容](../assest/LaDM3IL/experiment-page-06.webp)](../assest/LaDM3IL/experiment-page-06.webp)
-
-[查看原尺寸](../assest/LaDM3IL/experiment-page-06.webp)
-
-**实验原页 · PDF 第 7 页**（图表及正文引用：Figure 3、Table 4、Figure 4）
-
-[![LaDM³IL：PDF 第 7 页完整实验内容](../assest/LaDM3IL/experiment-page-07.webp)](../assest/LaDM3IL/experiment-page-07.webp)
-
-[查看原尺寸](../assest/LaDM3IL/experiment-page-07.webp)
-
-<!-- /wsi-complete-results -->
+与表中次优方法相比，CMV 组库分类和癌症受体识别的 AUC 分别高 1.64 和 1.19 个百分点。两项任务的预测单位不同，癌症数据也缺少 CMV 实验使用的 VDJ 信息。
 
 ##### 消融与讨论
 

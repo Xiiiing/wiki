@@ -16,18 +16,11 @@
 
 （3）双分支协同：同时从增强样本和原始注意力中学习，更正不准确定位。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-**图 3 · 模型结构**（PDF 第 4 页）
+[![FAMIL 模型结构](assest/FAMIL/figure-3-complete.webp)](assest/FAMIL/figure-3-complete.webp)
 
-[![FAMIL：图 3，模型结构](assest/FAMIL/figure-3-complete.webp)](assest/FAMIL/figure-3-complete.webp)
-
-> 原文图注：Fig. 3. Overview of our proposed FAMIL. FAMIL contains an instance branch and a bag branch. The red dotted box represents ABMix, and the blue dotted box represents ABMask, with a positive WSI and a negative WSI taken as examples. The solid rectangular box provides a t-SNE [55] visualization of the instances, where the scatter points represent the instance and each color represents a different score for the instance. pos. stands for the abbreviation of positive, and neg. stands for the abbreviation of negative.
-
-[查看原尺寸](assest/FAMIL/figure-3-complete.webp)
-
-<!-- /wsi-complete-model -->
+图 3（PDF 第 4 页）
 
 #### 实验
 
@@ -35,51 +28,19 @@
 
 在不同注意力基线中加入在线增强，覆盖二分类、多分类、平衡和不平衡任务。
 
-##### 主要结果
+##### 关键指标 { #key-results }
+
+| 数据集与聚合器 | AUC（%） |
+| --- | --- |
+| CAMELYON16，ABMIL | 92.61 ± 1.96 |
+| TCGA-NSCLC，ABMIL | 93.81 ± 2.97 |
+| TCGA-RCC，DSMIL | 98.41 ± 1.04 |
+
+数据来源为原文表 I，PDF 第 7 页。
+
+##### 结果解读
 
 摘要报告 C16 AUC 达 92.61%，NSCLC/RCC 达 93.81%/98.41%；需要保留对应编码器与基线配置。
-
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
-
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
-
-| 原表/图中指标 | 读取方式 |
-| --- | --- |
-| ROC-AUC / AUROC | 越高越好；若原表明确为 PR-AUC，则按 PR 曲线面积读取 |
-
-| 原文页 | 阅读内容 | 图表及正文引用 |
-| --- | --- | --- |
-| PDF 第 7 页 | 实验结果 | Table I |
-| PDF 第 9 页 | 实验结果 | Table II、Table III |
-| PDF 第 10 页 | 实验结果 | Figure 7、Table IV |
-| PDF 第 11 页 | 实验结果 | Table V |
-
-**实验原页 · PDF 第 7 页**（图表及正文引用：Table I）
-
-[![FAMIL：PDF 第 7 页完整实验内容](assest/FAMIL/experiment-page-07.webp)](assest/FAMIL/experiment-page-07.webp)
-
-[查看原尺寸](assest/FAMIL/experiment-page-07.webp)
-
-**实验原页 · PDF 第 9 页**（图表及正文引用：Table II、Table III）
-
-[![FAMIL：PDF 第 9 页完整实验内容](assest/FAMIL/experiment-page-09.webp)](assest/FAMIL/experiment-page-09.webp)
-
-[查看原尺寸](assest/FAMIL/experiment-page-09.webp)
-
-**实验原页 · PDF 第 10 页**（图表及正文引用：Figure 7、Table IV）
-
-[![FAMIL：PDF 第 10 页完整实验内容](assest/FAMIL/experiment-page-10.webp)](assest/FAMIL/experiment-page-10.webp)
-
-[查看原尺寸](assest/FAMIL/experiment-page-10.webp)
-
-**实验原页 · PDF 第 11 页**（图表及正文引用：Table V）
-
-[![FAMIL：PDF 第 11 页完整实验内容](assest/FAMIL/experiment-page-11.webp)](assest/FAMIL/experiment-page-11.webp)
-
-[查看原尺寸](assest/FAMIL/experiment-page-11.webp)
-
-<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

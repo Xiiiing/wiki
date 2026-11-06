@@ -16,18 +16,11 @@
 
 （3）切片聚合：由多个 clip 表示完成包预测，允许特征提取与聚合端到端优化。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-**图 2 · 模型结构**（PDF 第 3 页）
+[![VINO 模型结构](assest/VINO/figure-2-complete.webp)](assest/VINO/figure-2-complete.webp)
 
-[![VINO：图 2，模型结构](assest/VINO/figure-2-complete.webp)](assest/VINO/figure-2-complete.webp)
-
-> 原文图注：Figure 2: Overview of the proposed VINO framework for bag-level classiﬁcation. We construct a series of synthetic video clips from a WSI which help achieve end-to-end training and modeling of contextual relationships between patches at the same time.
-
-[查看原尺寸](assest/VINO/figure-2-complete.webp)
-
-<!-- /wsi-complete-model -->
+图 2（PDF 第 3 页）
 
 #### 实验
 
@@ -35,37 +28,18 @@
 
 报告包级 AUC 与实例级 AUC；PANDA 按不同 Gleason 模式报告，另区分端到端与预提取特征版本。
 
-##### 主要结果
+##### 关键指标 { #key-results }
 
-CAMELYON16 上 VINO-E2E 的实例级和包级 AUC 分别为 0.9213、0.9466；端到端训练进一步增强包分类。
-
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
-
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
-
-| 原表/图中指标 | 读取方式 |
-| --- | --- |
-| ROC-AUC / AUROC | 越高越好；若原表明确为 PR-AUC，则按 PR 曲线面积读取 |
-
-| 原文页 | 阅读内容 | 图表及正文引用 |
+| 设置 | 实例级 AUC | 包级 AUC |
 | --- | --- | --- |
-| PDF 第 6 页 | 实验结果 | Table 1 |
-| PDF 第 7 页 | 实验结果 | Table 2、Table 3、Table 4、Table 5 |
+| VINO-Feature | 0.9185 | 0.9085 |
+| VINO-E2E | 0.9213 | 0.9466 |
 
-**实验原页 · PDF 第 6 页**（图表及正文引用：Table 1）
+数据来源为原文表 1，PDF 第 6 页，CAMELYON16。
 
-[![VINO：PDF 第 6 页完整实验内容](assest/VINO/experiment-page-06.webp)](assest/VINO/experiment-page-06.webp)
+##### 结果解读
 
-[查看原尺寸](assest/VINO/experiment-page-06.webp)
-
-**实验原页 · PDF 第 7 页**（图表及正文引用：Table 2、Table 3、Table 4、Table 5）
-
-[![VINO：PDF 第 7 页完整实验内容](assest/VINO/experiment-page-07.webp)](assest/VINO/experiment-page-07.webp)
-
-[查看原尺寸](assest/VINO/experiment-page-07.webp)
-
-<!-- /wsi-complete-results -->
+在 CAMELYON16 上，端到端训练对包级 AUC 的提升大于对实例级 AUC 的提升。PANDA 的指标按 Gleason 模式统计，适合按同一模式对比。
 
 ##### 消融与讨论
 
