@@ -16,18 +16,11 @@
 
 （3）传播整合：利用图关系更新实例定位，同时保留切片分类任务。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-**图 2 · 模型结构**（PDF 第 4 页）
+[![PaM-MIL 模型结构](assest/PaM-MIL/figure-2-complete.webp)](assest/PaM-MIL/figure-2-complete.webp)
 
-[![PaM-MIL：图 2，模型结构](assest/PaM-MIL/figure-2-complete.webp)](assest/PaM-MIL/figure-2-complete.webp)
-
-> 原文图注：Figure 2. Illustration of our PaM-MIL framework for the positive instance localization. In step (a), a MIL model is used to generate attention maps for WSIs. Then, in step (b), TPM module is used to identify primary points and proliferate positive instances, resulting in a ﬁne-grained positive instance localization map. Finally, in step (c), TMM module is employed to identify small and scattered tumor regions that may be overlooked during the proliferation process.
-
-[查看原尺寸](assest/PaM-MIL/figure-2-complete.webp)
-
-<!-- /wsi-complete-model -->
+图 2（PDF 第 4 页）
 
 #### 实验
 
@@ -35,38 +28,19 @@
 
 同时使用实例定位与包分类指标，五个随机种子；默认 ResNet50，k-NN 的 k=8，传播最多 20 次。
 
-##### 主要结果
+##### 关键指标 { #key-results }
+
+| 方法 | 区域定位 F1 |
+| --- | --- |
+| ABMIL | 0.3694 |
+| TransMIL | 0.2541 |
+| PaM-MIL | 0.6651 ± 0.067 |
+
+数据来源为原文表 1，PDF 第 7 页，CAMELYON16。
+
+##### 结果解读
 
 C16 定位 F1 从 ABMIL 的 0.3694、TransMIL 的 0.2541 到 0.6651；这是定位 F1，不是切片分类 F1。
-
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
-
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
-
-| 原表/图中指标 | 读取方式 |
-| --- | --- |
-| ROC-AUC / AUROC | 越高越好；若原表明确为 PR-AUC，则按 PR 曲线面积读取 |
-| F1 | 越高越好；保留 macro / weighted / micro 等平均方式 |
-
-| 原文页 | 阅读内容 | 图表及正文引用 |
-| --- | --- | --- |
-| PDF 第 7 页 | 实验结果 | Table 1、Table 2 |
-| PDF 第 8 页 | 实验结果 | Table 3、Table 4 |
-
-**实验原页 · PDF 第 7 页**（图表及正文引用：Table 1、Table 2）
-
-[![PaM-MIL：PDF 第 7 页完整实验内容](assest/PaM-MIL/experiment-page-07.webp)](assest/PaM-MIL/experiment-page-07.webp)
-
-[查看原尺寸](assest/PaM-MIL/experiment-page-07.webp)
-
-**实验原页 · PDF 第 8 页**（图表及正文引用：Table 3、Table 4）
-
-[![PaM-MIL：PDF 第 8 页完整实验内容](assest/PaM-MIL/experiment-page-08.webp)](assest/PaM-MIL/experiment-page-08.webp)
-
-[查看原尺寸](assest/PaM-MIL/experiment-page-08.webp)
-
-<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

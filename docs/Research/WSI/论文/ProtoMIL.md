@@ -16,18 +16,11 @@
 
 （3）人为干预：删除或修改输入概念，检查是否依赖无关信息。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-**图 1 · 模型结构**（PDF 第 2 页）
+[![ProtoMIL 模型结构](assest/ProtoMIL/figure-1-complete.webp)](assest/ProtoMIL/figure-1-complete.webp)
 
-[![ProtoMIL：图 1，模型结构](assest/ProtoMIL/figure-1-complete.webp)](assest/ProtoMIL/figure-1-complete.webp)
-
-> 原文图注：Fig. 1. The ProtoMIL Pipeline: (a) A sparse autoencoder is trained to discover human- interpretable concepts from the image embedding space. (b) The concepts are linked to visual representations, allowing pathologists to examine them and identify spurious features. (c) ProtoMIL is trained to use the discovered concepts as inputs, with the option to disable spurious concepts via human intervention.
-
-[查看原尺寸](assest/ProtoMIL/figure-1-complete.webp)
-
-<!-- /wsi-complete-model -->
+图 1（PDF 第 2 页）
 
 #### 实验
 
@@ -35,31 +28,18 @@
 
 C16 保留官方测试集，训练/验证为 80/20；PANDA 公开训练部分按 80/10/10 划分。
 
-##### 主要结果
+##### 关键指标 { #key-results }
+
+| 概念配置 | CAMELYON16 ACC | CAMELYON16 AUC | PANDA ACC | PANDA AUC |
+| --- | --- | --- | --- | --- |
+| 全部概念 | 0.907 | 0.918 | 0.916 | 0.970 |
+| 干预后 | 0.926 | 0.913 | 0.916 | 0.964 |
+
+数据来源为原文表 1，PDF 第 8 页。
+
+##### 结果解读
 
 概念输入下分类表现与传统图像特征 MIL 相近，同时允许人工删除不相关概念；核心不是单纯追求最高 AUC。
-
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
-
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
-
-| 原表/图中指标 | 读取方式 |
-| --- | --- |
-| ROC-AUC / AUROC | 越高越好；若原表明确为 PR-AUC，则按 PR 曲线面积读取 |
-| ACC / Accuracy | 越高越好；平衡准确率、平均准确率以原表标注为准 |
-
-| 原文页 | 阅读内容 | 图表及正文引用 |
-| --- | --- | --- |
-| PDF 第 8 页 | 实验结果 | Table 1 |
-
-**实验原页 · PDF 第 8 页**（图表及正文引用：Table 1）
-
-[![ProtoMIL：PDF 第 8 页完整实验内容](assest/ProtoMIL/experiment-page-08.webp)](assest/ProtoMIL/experiment-page-08.webp)
-
-[查看原尺寸](assest/ProtoMIL/experiment-page-08.webp)
-
-<!-- /wsi-complete-results -->
 
 ##### 消融与讨论
 

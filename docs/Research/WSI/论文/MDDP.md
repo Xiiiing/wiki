@@ -16,18 +16,11 @@
 
 （3）包特征增强：将仅由 H&E 提取的 IHC 引导特征加入现有 MIL 包表示。
 
-<!-- wsi-complete-model -->
 ##### 模型结构图
 
-**图 2 · 模型结构**（PDF 第 4 页）
+[![MDDP 模型结构](assest/MDDP/figure-2-complete.webp)](assest/MDDP/figure-2-complete.webp)
 
-[![MDDP：图 2，模型结构](assest/MDDP/figure-2-complete.webp)](assest/MDDP/figure-2-complete.webp)
-
-> 原文图注：Figure 2: (a) Multi-modal image registration and label assignment. The IHC staining based label assignment is to assign a positive/negative pseudo label for each H&E-IHC stained patch pair based on the percentage of brown regions in the IHC-stained patch. (b) Multi-modal denoising diffusion pre-training framework. We employ a denoising-diffusion model to accomplish the re-staining task and the reconstruction task on two staining modalities at the feature level. 𝑓𝑡represents the generated features of the re-staining task, while 𝑔𝑡represents the generated features of the reconstruction task.
-
-[查看原尺寸](assest/MDDP/figure-2-complete.webp)
-
-<!-- /wsi-complete-model -->
+图 2（PDF 第 4 页）
 
 #### 实验
 
@@ -35,40 +28,19 @@
 
 向 CLAM-SB、CLAM-MB、DTFD-MIL、HAG-MIL 加入预训练特征与包增强；另在相同聚合器下比较预训练方法。
 
-##### 主要结果
+##### 关键指标 { #key-results }
 
-三个数据集的最优聚合器组合并不相同：分别为 HAG-MIL、CLAM-SB、HAG-MIL，说明增益需结合下游模型看。
+| 数据集与聚合器 | AUC | F1 | ACC |
+| --- | --- | --- | --- |
+| CAMELYON16，HAG-MIL | 0.953 ± 0.013 | 0.905 ± 0.022 | 0.893 ± 0.023 |
+| TCGA-COAD，CLAM-SB | 0.898 ± 0.031 | 0.710 ± 0.045 | 0.918 ± 0.028 |
+| TCGA-NSCLC，HAG-MIL | 0.951 ± 0.017 | 0.881 ± 0.020 | 0.883 ± 0.020 |
 
-<!-- wsi-complete-results -->
-##### 完整实验指标与对照
+数据来源为原文表 1，PDF 第 6 页。
 
-下列实验原页保留表头、全部行列、子图、误差说明和脚注，点击可查看原尺寸。比较时请对应相同的数据集、特征编码器和训练设置；`±`、置信区间、百分比和小数均保留原文的单位与统计口径。
+##### 结果解读
 
-| 原文页 | 阅读内容 | 图表及正文引用 |
-| --- | --- | --- |
-| PDF 第 5 页 | 实验结果 | Figure 3 |
-| PDF 第 6 页 | 实验结果 | Table 1 |
-| PDF 第 7 页 | 实验结果 | Table 2、Table 3 |
-
-**实验原页 · PDF 第 5 页**（图表及正文引用：Figure 3）
-
-[![MDDP：PDF 第 5 页完整实验内容](assest/MDDP/experiment-page-05.webp)](assest/MDDP/experiment-page-05.webp)
-
-[查看原尺寸](assest/MDDP/experiment-page-05.webp)
-
-**实验原页 · PDF 第 6 页**（图表及正文引用：Table 1）
-
-[![MDDP：PDF 第 6 页完整实验内容](assest/MDDP/experiment-page-06.webp)](assest/MDDP/experiment-page-06.webp)
-
-[查看原尺寸](assest/MDDP/experiment-page-06.webp)
-
-**实验原页 · PDF 第 7 页**（图表及正文引用：Table 2、Table 3）
-
-[![MDDP：PDF 第 7 页完整实验内容](assest/MDDP/experiment-page-07.webp)](assest/MDDP/experiment-page-07.webp)
-
-[查看原尺寸](assest/MDDP/experiment-page-07.webp)
-
-<!-- /wsi-complete-results -->
+固定病理预训练方法后，各数据集上表现最好的聚合器仍不同。IHC 提供预训练监督，推理时只输入 H&E。
 
 ##### 消融与讨论
 
